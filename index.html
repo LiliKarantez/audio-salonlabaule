@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formule 1 du Bord de Mer, 58 ans — Les Audios des Cœurs à Prendre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Bai Jamjuree', Arial, sans-serif;
+    font-size: 13px;
+    background:#e6f2f2;
+    color:#4B1F72;
+    line-height:1.6;
+  }
+  .topbar {
+    background:linear-gradient(120deg, #4B1F72 0%, #6B3FA0 100%);
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+  }
+  .topbar .brand { font-size:16px; letter-spacing:0.5px; font-weight:600; }
+  .topbar .brand .coeur { color:#E91E8C; }
+  .topbar .signature { font-size:9px; letter-spacing:1px; color:#c3dde0; margin-top:4px; }
+  .topbar .tag-wrap { text-align:right; }
+  .topbar .tag { font-size:10px; letter-spacing:2px; color:#c3dde0; }
+  .topbar .date { font-size:8px; letter-spacing:1px; color:#8fb9be; margin-top:4px; }
+
+  .hero {
+    background:linear-gradient(160deg, #4B1F72 0%, #6B3FA0 55%, #E91E8C 130%);
+    color:#fff;
+    text-align:center;
+    padding:36px 20px 30px;
+  }
+  .hero .label {
+    font-size:10px;
+    letter-spacing:3px;
+    color:#E91E8C;
+    margin-bottom:10px;
+    font-weight:600;
+  }
+  .hero h1 {
+    font-weight:600;
+    font-size:23px;
+    margin-bottom:8px;
+  }
+  .hero h1 .age { color:#E91E8C; font-style:italic; }
+  .hero .loc {
+    font-size:12px;
+    color:#c3dde0;
+    margin-bottom:18px;
+  }
+  .chips { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+  .chip {
+    font-size:11px;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.28);
+    color:#fff;
+    padding:7px 16px;
+    border-radius:20px;
+  }
+  .hero .physique {
+    font-size:12px;
+    color:#ffffff;
+    font-style:italic;
+  }
+
+  .content {
+    max-width:650px;
+    margin:0 auto;
+    padding:40px 20px 20px;
+  }
+  .card {
+    background:#fff;
+    border-left:4px solid #6B3FA0;
+    border-radius:4px;
+    padding:22px 24px;
+    margin-bottom:20px;
+    box-shadow:0 1px 3px rgba(11,37,69,0.06);
+  }
+  .card.alt { border-left:4px solid #E91E8C; }
+  .card h2 {
+    font-weight:600;
+    font-size:15px;
+    color:#4B1F72;
+    margin-bottom:10px;
+  }
+  .card h2 em { color:#E91E8C; font-style:italic; font-weight:600; }
+  .card p { font-size:13px; color:#4B1F72; text-align:justify; }
+  .card p + p { margin-top:10px; }
+
+  .two-col { display:flex; gap:16px; }
+  .two-col .card { flex:1; }
+
+  .mots-label {
+    font-size:10px;
+    letter-spacing:1.5px;
+    color:#4a6a70;
+    margin:18px 0 8px;
+    font-weight:600;
+  }
+  .mots-chips { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:6px; }
+  .mot {
+    font-size:12px;
+    padding:7px 14px;
+    border-radius:14px;
+    color:#fff;
+    font-weight:500;
+  }
+  .mot.elle { background:#4B1F72; }
+  .mot.amour { background:#E91E8C; }
+
+  .loisirs-chips { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+  .loisir {
+    font-size:12px;
+    border:1px solid #c3dde0;
+    border-radius:14px;
+    padding:7px 14px;
+    color:#4B1F72;
+    background:#f0f9f9;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+
+  .audio-block {
+    background:linear-gradient(135deg, #4B1F72 0%, #E91E8C 140%);
+    color:#fff;
+    border-radius:6px;
+    padding:30px 24px;
+    text-align:center;
+    margin-bottom:20px;
+  }
+  .audio-block h3 {
+    font-weight:600;
+    font-size:18px;
+    margin-bottom:6px;
+  }
+  .audio-block h3 em { color:#E91E8C; font-style:italic; }
+  .audio-block .sub {
+    font-size:12px;
+    color:#c3dde0;
+    margin-bottom:20px;
+  }
+  .audio-item { margin-bottom:22px; }
+  .audio-item:last-child { margin-bottom:0; }
+  .audio-caption {
+    font-size:11px;
+    letter-spacing:0.5px;
+    color:#E91E8C;
+    margin-bottom:8px;
+    font-weight:600;
+  }
+  .audio-pending {
+    font-size:12px;
+    color:#fff;
+    background:rgba(255,255,255,0.1);
+    border:1px dashed rgba(255,255,255,0.35);
+    border-radius:6px;
+    padding:16px;
+  }
+
+  .cta-wrap { text-align:center; margin-bottom:10px; }
+  .cta {
+    display:inline-block;
+    background:#2ECC71;
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    padding:15px 30px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(46,204,113,0.4);
+  }
+  .cta-note {
+    font-size:10px;
+    color:#4a6a70;
+    margin-top:8px;
+    margin-bottom:22px;
+  }
+  .cta-whatsapp {
+    display:inline-block;
+    background:#2ECC71;
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    padding:15px 30px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(46,204,113,0.4);
+  }
+  .cta-pending {
+    display:inline-block;
+    background:#cfd8dc;
+    color:#5a5a5a;
+    font-size:12px;
+    padding:14px 28px;
+    border-radius:6px;
+  }
+  .salon-teaser {
+    background:#fff;
+    border:2px dashed #E91E8C;
+    border-radius:8px;
+    padding:26px 24px;
+    text-align:center;
+    margin-bottom:36px;
+  }
+  .salon-teaser .teaser-label {
+    font-size:10px;
+    letter-spacing:2px;
+    color:#E91E8C;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .salon-teaser h3 {
+    font-size:17px;
+    color:#4B1F72;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .salon-teaser p {
+    font-size:13px;
+    color:#4B1F72;
+    margin-bottom:4px;
+  }
+  .interest-form {
+    background:transparent;
+    border-radius:0;
+    padding:0;
+    margin-top:20px;
+    margin-bottom:0;
+    box-shadow:none;
+    border-top:1px solid #f0c9dc;
+    padding-top:20px;
+  }
+  .interest-form h4 {
+    font-size:14px;
+    color:#4B1F72;
+    font-weight:600;
+    margin-bottom:14px;
+    text-align:center;
+  }
+  .interest-form label {
+    display:block;
+    font-size:11px;
+    color:#4B1F72;
+    font-weight:600;
+    margin-bottom:4px;
+    margin-top:12px;
+  }
+  .interest-form input {
+    width:100%;
+    padding:10px 12px;
+    border:1px solid #d9c8ea;
+    border-radius:6px;
+    font-family:'Bai Jamjuree', Arial, sans-serif;
+    font-size:13px;
+    color:#4B1F72;
+  }
+  .interest-form .submit-wrap { text-align:center; margin-top:20px; }
+  .interest-form button {
+    background:#2ECC71;
+    color:#fff;
+    border:none;
+    font-size:14px;
+    font-weight:700;
+    padding:14px 30px;
+    border-radius:8px;
+    font-family:'Bai Jamjuree', Arial, sans-serif;
+    cursor:pointer;
+    box-shadow:0 3px 10px rgba(46,204,113,0.4);
+  }
+
+  footer {
+    text-align:center;
+    font-size:10px;
+    color:#4a6a70;
+    padding-bottom:30px;
+  }
+  footer p { margin-bottom:4px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>
+    <div class="brand">Les <span class="coeur">Cœurs</span> Solitaires</div>
+    <div class="signature">Lili Karantez · Révélatrice de rencontres</div>
+  </div>
+  <div class="tag-wrap">
+    <div class="tag">AUDIOS DES CŒURS À PRENDRE</div>
+    <div class="date">13/09/2026</div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="label">PORTRAIT MEMBRE</div>
+  <h1>Formule 1 du Bord de Mer, <span class="age">58 ans</span></h1>
+  <div class="loc">La Baule · Loire Atlantique</div>
+  <div class="chips">
+    <div class="chip">Non fumeuse</div>
+    <div class="chip">Prête à déménager</div>
+    <div class="chip">Cherche un homme, 58 à 64 ans</div>
+  </div>
+  <div class="physique">1,68 m · silhouette avec des formes · yeux marrons</div>
+</div>
+
+<div class="content">
+
+  <div class="card">
+    <h2>Qui je <em>suis</em></h2>
+    <p>Je suis une femme très gentille, généreuse. J'adore partager et voyager. La Formule 1 est un plaisir pour moi.</p>
+  </div>
+
+  <div class="card alt">
+    <h2>Ce que je <em>cherche</em></h2>
+    <p>Je recherche un homme calme, sympathique et tendre. Je recherche une complicité sérieuse.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>Ce que j'<em>apporte</em></h2>
+      <p>Dans une relation, j'apporte stabilité, confiance et amour.</p>
+    </div>
+    <div class="card alt">
+      <h2>Mon petit <em>truc</em></h2>
+      <p>Je suis patiente et sérieuse.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Mon <em>quotidien</em></h2>
+    <p>J'ai un petit chien, Skippy. Promenade tous les jours sur la plage.</p>
+    <p>Je me réveille tous les jours avec une vue sur les bateaux.</p>
+  </div>
+
+  <div class="mots-label">TROIS MOTS SUR ELLE</div>
+  <div class="mots-chips">
+    <div class="mot elle">Bienveillante</div>
+    <div class="mot elle">Attentionnée</div>
+    <div class="mot elle">Souriante</div>
+  </div>
+
+  <div class="mots-label">TROIS MOTS SUR L'AMOUR</div>
+  <div class="mots-chips">
+    <div class="mot amour">Complicité</div>
+    <div class="mot amour">Tendresse</div>
+    <div class="mot amour">Douceur</div>
+  </div>
+
+  <div class="card alt" style="margin-top:20px;">
+    <h2>Passions & <em>loisirs</em></h2>
+    <div class="loisirs-chips">
+      <span class="loisir">🍳 Gastronomie</span>
+      <span class="loisir">✈️ Voyage</span>
+      <span class="loisir">🐾 Animaux</span>
+      <span class="loisir">🌱 Jardinage</span>
+      <span class="loisir">🎤 Concerts</span>
+    </div>
+    <p>J'adore faire des voyages et cumuler les Grand Prix de Formule 1. Se rendre sur un Grand Prix, c'est magique.</p>
+  </div>
+
+  <div class="audio-block">
+    <h3>Écoutez la <em>voix</em> de Formule 1 du Bord de Mer</h3>
+    <div class="sub">Prenez le temps de l'écouter, avant de faire connaissance.</div>
+    <div class="audio-pending">Audio à venir prochainement</div>
+  </div>
+
+  <div class="salon-teaser">
+    <div class="teaser-label">RENDEZ VOUS AU SALON</div>
+    <h3>Envie d'en savoir plus sur ce profil au Salon de la Rencontre Célibataire à La Baule ?</h3>
+    <p><strong>Le 10 octobre à La Baule</strong></p>
+
+    <div class="interest-form">
+      <h4>Oui, je suis intéressé, voici mes coordonnées</h4>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="d42b8d9d-a52c-4888-a489-5dd59b1b0f5b">
+        <input type="hidden" name="subject" value="Intérêt pour Formule 1 du Bord de Mer">
+        <input type="hidden" name="from_name" value="Formulaire Formule 1 du Bord de Mer">
+        <input type="hidden" name="profil_concerne" value="Formule 1 du Bord de Mer">
+
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" required>
+
+        <label for="email">Adresse électronique</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Âge</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" name="ville" required>
+
+        <label for="pseudo">Votre pseudo</label>
+        <input type="text" id="pseudo" name="pseudo">
+
+        <div class="submit-wrap">
+          <button type="submit">Envoyer mes coordonnées</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="cta-wrap" style="margin-bottom:36px;">
+    <a class="cta-whatsapp" href="https://yp.events/d93d5315-55c5-497a-9a6a-94665c09722b/Salon-de-la-Rencontre-Celibataire-a-LA-BAULE?from=-1" target="_blank" rel="noopener">Je m'inscris au Salon de la Rencontre Célibataire</a>
+  </div>
+
+  <div class="cta-wrap" style="margin-bottom:36px;">
+    <p class="cta-note" style="margin-bottom:14px; font-size:12px;">Vous ne pourrez pas être présent le 10 octobre ?</p>
+    <a class="cta-whatsapp" href="https://wa.me/33633054456" target="_blank" rel="noopener">Je contacte Lili Karantez pour une mise en relation après le salon le cas échéant (service payant)</a>
+  </div>
+
+  <footer>
+    <p>Lili Karantez® · Les Cœurs Solitaires · SIRET 40149331700069</p>
+    <p>Vos données nous sont confiées. Elles ne seront jamais vendues, jamais partagées.</p>
+    <p>©2026 Lili Karantez — Toute reproduction interdite, même partielle.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
